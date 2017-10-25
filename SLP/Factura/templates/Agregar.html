@@ -1,0 +1,157 @@
+{% extends "index.html" %}
+{% block contenido %}
+
+<!-- Begin: Admin Form -->
+            <div class="admin-form">
+
+              <div class="panel heading-border">
+                <div class="panel-body bg-center">
+                  <form method="POST" action="" id="form-ui" enctype="multipart/form-data">
+                    {% csrf_token %}
+                  <div class="section-divider mb30" id="spy1">
+                      <span>Agregar Proveedor</span>
+                  </div>
+                    <!-- .section-divider -->
+
+                    {% load widget_tweaks %}
+
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="section">
+                          <label class="field">
+                             {% render_field form.c_proveedor_nombre class="gui-input" placeholder=form.c_proveedor_nombre.label %}
+                            {{ form.c_proveedor_nombre.errors }}
+
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                       <div class="row">
+                      <div class="col-md-3">
+                        <div class="section">
+                          <label class="field">
+                            {% render_field form.c_proveedor_nfiscal class="gui-input" placeholder=form.c_proveedor_nfiscal.label %}
+                            {{ form.c_proveedor_nfiscal.errors }}
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="section">
+                            <label class="field">
+                               {% render_field form.c_proveedor_domicilio class="gui-input" placeholder=form.c_proveedor_domicilio.label onkeypress="return valida(event)"%}
+                               {{ form.c_proveedor_domicilio.errors }}
+                            </label>
+                            </div>
+                        </div>
+                      </div>
+
+                             <div class="row">
+                      <div class="col-md-4">
+                        <div class="section">
+                          <label class="field">
+                               {% render_field form.c_proveedor_colonia class="gui-input" placeholder=form.c_proveedor_colonia.label onkeypress="return valida(event)"%}
+                               {{ form.c_proveedor_colonia.errors }}
+                          </label>
+                        </div>
+                      </div>
+                             </div>
+
+                                 <div class="row">
+                      <div class="col-md-2">
+                        <div class="section">
+                          <label class="field">
+                               {% render_field form.c_proveedor_telefono class="gui-input" placeholder=form.c_proveedor_telefono.label onkeypress="return valida(event)"%}
+                               {{ form.c_proveedor_telefono.errors }}
+                          </label>
+                        </div>
+                      </div>
+
+
+                      <div class="col-md-2">
+                        <div class="section">
+                          <label class="field">
+                               {% render_field form.c_proveedor_fax class="gui-input" placeholder=form.c_proveedor_fax.label onkeypress="return valida(event)"%}
+                               {{ form.c_proveedor_fax.errors }}
+                          </label>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="col-md-2">
+                        <div class="section">
+                          <label class="field">
+                               {% render_field form.c_proveedor_rfc class="gui-input" placeholder=form.c_proveedor_rfc.label onkeypress="return valida(event)"%}
+                               {{ form.c_proveedor_rfc.errors }}
+                          </label>
+                        </div>
+                      </div>
+
+                                            </div>
+                                     <div class="row">
+                      <div class="col-md-2">
+                        <div class="section">
+                          <label class="field">
+                               {% render_field form.c_proveedor_cp class="gui-input" placeholder=form.c_proveedor_cp.label onkeypress="return valida(event)"%}
+                               {{ form.c_proveedor_cp.errors }}
+                          </label>
+                        </div>
+                      </div>
+                                     </div>
+
+                                     <div class="row">
+                                     <div class="col-md-2">
+                        <div class="section">
+                          <label class="field">
+                               {% render_field form.c_proveedor_ciudad class="gui-input" placeholder=form.c_proveedor_ciudad.label onkeypress="return valida(event)"%}
+                               {{ form.c_proveedor_ciudad.errors }}
+                          </label>
+                        </div>
+                      </div>
+                                     </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                        <div class="section">
+                          <label class="field prepend-icon">
+                              {% render_field form.c_proveedor_email type="email" class="gui-input" placeholder=form.c_proveedor_email.label %}
+                              {{ form.c_proveedor_email.errors }}
+                            <label for="email" class="field-icon">
+                              <i class="fa fa-envelope"></i>
+                            </label>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                         <div class="row">
+                                     <div class="col-md-2">
+                        <div class="section">
+                          <label class="field">
+                               {% render_field form.n_proveedor_idrel type="number" class="gui-input" placeholder=form.n_proveedor_idrel.label onkeypress="return valida(event)"%}
+                               {{ form.n_proveedor_idrel.errors }}
+                          </label>
+                        </div>
+                      </div>
+                                     </div>
+
+
+
+
+                      <center>
+                        <div class="buton">
+                        <button type="submit" class="btn btn-primary light">Agregar Proveedor</button>
+                        </div>
+                      </center>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+{% endblock contenido%}

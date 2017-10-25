@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+
+<!-- Begin: Admin Form -->
+            <div class="admin-form">
+
+              <div class="panel heading-border">
+                <div class="panel-body bg-center">
+                  <form method="POST" action="" id="form-ui" enctype="multipart/form-data">
+                    {% csrf_token %}
+                  <div class="section-divider mb40" id="spy1">
+                      <span>{{prov.c_proveedor_nombre}}</span>
+                  </div>
+                    <!-- .section-divider -->
+                      <h3>
+                          <b>Numero Fiscal:</b><font color="silver"> {{prov.c_proveedor_nfiscal}}</font><br><br>
+                          <b>Domicilio:</b> <font color="silver">{{prov.c_proveedor_domicilio}}</font><br><br>
+                          <b>Colonia:</b> <font color="silver">{{prov.c_proveedor_colonia}}</font><br><br>
+                          <b>Telefono:</b> <font color="silver">{{prov.c_proveedor_telefono}}</font><br><br>
+                          <b>Fax:</b> <font color="silver">{{prov.c_proveedor_fax}}</font><br><br>
+                          <b>RFC:</b> <font color="silver">{{prov.c_proveedor_rfc }}</font><br><br>
+                          <b>CP:</b><font color="silver"> {{prov.c_proveedor_cp}}</font><br><br>
+                          <b>Ciudad:</b> <font color="silver">{{prov.c_proveedor_ciudad}}</font><br><br>
+                          <b>E-mail:</b><font color="silver"> {{prov.c_proveedor_email}}</font><br><br>
+                      </h3>
+                      <center>
+                        <div class="buton">
+                           <a class="btn btn-primary light ml15" href="{% url 'Proveedor:EditarProveedor' %}" >Regresar</a>
+                        </div>
+                      </center>
+                  </form>
+                </div>
+              </div>
+            </div>
+{% endblock contenido%}

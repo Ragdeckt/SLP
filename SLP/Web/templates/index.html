@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+     <head>
+     <title>Home</title>
+     <meta charset="utf-8">
+          <meta charset="utf-8">
+  <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
+          <meta charset="utf-8">
+  <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
+  <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+  <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+  <meta name="author" content="AdminDesigns">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+  <!-- FullCalendar Plugin CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme_smooth/vendor/plugins/fullcalendar/fullcalendar.min.css' %}">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme_smooth/assets/skin/default_skin/css/theme.css' %}">
+
+  <!-- Admin Forms CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme_smooth/assets/admin-tools/admin-forms/css/admin-forms.min.css' %}">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'theme_smooth/assets/img/favicon.ico' %}">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+  <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+  <meta name="author" content="AdminDesigns">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+  <!-- Datatables CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme_smooth/vendor/plugins/datatables/media/css/dataTables.bootstrap.css' %}">
+
+  <!-- Datatables Editor Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme_smooth/vendor/plugins/datatables/extensions/Editor/css/dataTables.editor.css' %}">
+
+  <!-- Datatables ColReorder Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme_smooth/vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css' %}">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'theme_smooth/assets/skin/default_skin/css/theme.css' %}">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'theme_smooth/assets/img/favicon.ico' %}">
+     <meta name = "format-detection" content = "telephone=no" />
+     <link rel="icon" href=" {% static 'images/favicon.ico' %}" >
+     <link rel="shortcut icon" href=" {% static 'images/favicon.ico' %}"  />
+     <link  rel="stylesheet" media="screen" href=" {% static 'css/style.css' %}">
+     <link  rel="stylesheet" href=" {% static 'css/camera.css' %}">
+     <link  rel="stylesheet" href=" {% static 'css/carousel.css' %}">
+     <link  rel="stylesheet" href=" {% static 'css/font-awesome.css' %}">
+     <script src=" {% static 'js/jquery.js' %}"></script>
+     <script src=" {% static 'js/jquery-migrate-1.1.1.js' %}"></script>
+     <script src=" {% static 'js/script.js' %}"></script>
+     <script src=" {% static 'js/jquery.equalheights.js' %}"></script>
+     <script src=" {% static 'js/superfish.js' %}"></script>
+     <script  src=" {% static 'js/jquery.responsivemenu.js' %}"></script>
+     <script  src=" {% static 'js/jquery.mobilemenu.js' %}"></script>
+     <script  src=" {% static 'js/jquery.easing.1.3.js' %}"></script>
+     <script src=" {% static 'js/camera.js' %}"></script>
+     <!--[if (gt IE 9)|!(IE)]><!-->
+     <script  src=" {% static 'js/jquery.mobile.customized.min.js' %}"></script>
+     <!--<![endif]-->
+      <script src=" {% static 'js/jquery.carouFredSel-6.1.0-packed.js' %}"></script>
+     <script  src=" {% static 'js/jquery.touchSwipe.min.js' %}"></script>
+
+
+
+
+      <link rel="stylesheet" type="text/css" media="screen" href=" {% static 'css/form.css' %}">
+          <link rel="stylesheet" type="text/css" media="screen" href=" {% static 'css/forms.css' %}">
+     <script src=" {% static 'js/jquery.js' %}"></script>
+     <script src=" {% static 'js/jquery-migrate-1.1.1.js' %}"></script>
+     <script src=" {% static 'js/script.js' %}"></script>
+     <script src=" {% static 'js/jquery.equalheights.js' %}"></script>
+     <script src=" {% static 'js/superfish.js' %}"></script>
+    <script type="text/javascript" src=" {% static 'js/forms.js' %}"></script>
+     <script  src=" {% static 'js/jquery.responsivemenu.js' %}"></script>
+     <script  src=" {% static 'js/jquery.mobilemenu.js' %}"></script>
+     <script  src=" {% static 'js/jquery.easing.1.3.js' %}"></script>
+
+     <script>
+
+
+
+
+
+
+     	$(document).ready(function(){
+      jQuery('#camera_wrap').camera({
+        loader: false,
+        pagination: false,
+        thumbnails: false,
+        height: '45%',
+        caption: false,
+        navigation: true,
+        fx: 'simpleFade'
+      });   
+			});
+   
+          $(window).load (
+    function(){$('.carousel1').carouFredSel({auto: false, prev: '.prev1',next: '.next1', width: 940, items: {
+      visible : {min: 1,
+       max: 1
+},
+height: 'auto',
+ width: 940,
+
+    }, responsive: true, 
+    
+    scroll: 1, 
+    
+    mousewheel: false,
+    
+    swipe: {onMouse: true, onTouch: true}});
+    
+    } ); 
+
+  
+     </script>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+     <!--[if lt IE 8]>
+   <div style=' clear: both; text-align:center; position: relative;'>
+     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+<![endif]-->
+     <!--[if lt IE 9]>
+      <script src="{% static 'js/html5shiv.js' %}"></script>
+
+    	<link  type="text/css" media="screen" href="{% static 'css/ie.css' %}">
+    <![endif]-->
+     </head>
+     <body class="datatables-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
+<!--==============================header=================================-->
+<header>
+<div class="container_12">
+    <div class="grid_12">
+           <h1><a href="index.html"><img src="{% static 'images/LOGO.png' %}"  width="300" height="90" ></a> </h1>
+        <div class="menu_block">
+               <nav>
+            <ul class="sf-menu">
+            <li class="current"	><a href="index-1.html">Contratos</a> </li>
+                   <li ><a href="index.html">Consultas</a>  <ul>
+                       <li><a href="#">Contrato</a></li>
+                           <li><a href="#">Proveedores</a></li>
+                               <li><a href="#">Ejercicio de Gasto</a></li>
+                       <li><a href="#">Atlas </a>
+                    		<ul>
+                           <li><a href="#">Reporte de Atlas</a></li>
+                           <li><a href="#">Listado de Atlas</a></li>
+                    
+                         </ul>
+                  </li>
+              
+
+                     </ul></li>
+                   
+                   <li><a href="index-2.html">Enlaces</a> </li>
+                   <li><a href="index-3.html">Utilerias</a> </li>
+                   <li><a href="index-4.html">Cerrar sesion</a> </li>
+                 </ul>
+          </nav>
+               <div class="clear"></div>
+             </div>
+        
+         </div>
+  </div>
+
+
+
+    <style type="text/css">
+/*<![CDATA[*/
+   form {
+    /* Sólo para centrar el formulario a la página */
+    margin: 0 auto;
+    width: 1000px;
+    /* Para ver el borde del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+/*]]>*/
+</style>
+</header>
+
+
+
+
+<div class="clear"></div>
+    <div class="bg1">
+        <div class="container_12">
+
+
+
+  {% block contenido %}
+            Contenido de la pagina
+      {% endblock contenido%}
+
+      </div>
+    </div>
+
+
+
+<div class="page1_block">
+  <div class="container_12">
+    <div class="grid_3">
+  
+   
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</div>
+
+     
+<!--=======content================================-->
+
+<!--==============================footer=================================-->
+
+  <div class="container_12">
+    <div class="grid_12"><footer>
+      <div class="socials">
+      <a href="#">facebook</a> | 
+      <a href="#">twitter</a> | 
+      <a href="#">google+</a></div>
+      <div class="copy">servicio de salud san luis potosi  &copy; 2017 | <a href="index-5.html">Politicas de privacidad</a></div></footer>
+    </div>
+  </div>
+
+       <!-- jQuery -->
+  <script src="{% static 'theme_smooth/vendor/jquery/jquery-1.11.1.min.js' %}"></script>
+  <script src="{% static 'theme_smooth/vendor/jquery/jquery_ui/jquery-ui.min.js' %}"></script>
+
+  <!-- HighCharts Plugin -->
+  <script src="{% static 'theme_smooth/vendor/plugins/highcharts/highcharts.js' %}"></script>
+
+  <!-- JvectorMap Plugin + US Map (more maps in plugin/assets folder) -->
+  <script src="{% static 'theme_smooth/vendor/plugins/jvectormap/jquery.jvectormap.min.js' %}"></script>
+  <script src="{% static 'theme_smooth/vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js' %}"></script>
+
+  <!-- Bootstrap Tabdrop Plugin -->
+  <script src="{% static 'theme_smooth/vendor/plugins/tabdrop/bootstrap-tabdrop.js' %}"></script>
+
+  <!-- FullCalendar Plugin + moment Dependency -->
+  <script src="{% static 'theme_smooth/vendor/plugins/fullcalendar/lib/moment.min.js' %}"></script>
+  <script src="{% static 'theme_smooth/vendor/plugins/fullcalendar/fullcalendar.min.js' %}"></script>
+
+  <!-- Theme Javascript -->
+  <script src="{% static 'theme_smooth/assets/js/utility/utility.js' %}"></script>
+  <script src="{% static 'theme_smooth/assets/js/demo/demo.js' %}"></script>
+  <script src="{% static 'theme_smooth/assets/js/main.js' %}"></script>
+
+  <!-- Widget Javascript -->
+  <script src="{% static 'theme_smooth/assets/js/demo/widgets.js' %}"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Demo JS
+    Demo.init();
+
+
+    // Init Theme Core
+    Core.init();
+
+
+    // Init Widget Demo JS
+    // demoHighCharts.init();
+
+    // Because we are using Admin Panels we use the OnFinish
+    // callback to activate the demoWidgets. It's smoother if
+    // we let the panels be moved and organized before
+    // filling them with content from various plugins
+
+    // Init plugins used on this page
+    // HighCharts, JvectorMap, Admin Panels
+
+    // Init Admin Panels on widgets inside the ".admin-panels" container
+    $('.admin-panels').adminpanel({
+      grid: '.admin-grid',
+      draggable: true,
+      preserveGrid: true,
+      // mobile: true,
+      onStart: function() {
+        // Do something before AdminPanels runs
+      },
+      onFinish: function() {
+        $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+        // Init the rest of the plugins now that the panels
+        // have had a chance to be moved and organized.
+        // It's less taxing to organize empty panels
+        demoHighCharts.init();
+        runVectorMaps(); // function below
+      },
+      onSave: function() {
+        $(window).trigger('resize');
+      }
+    });
+
+
+    // Init plugins for ".calendar-widget"
+    // plugins: FullCalendar
+    //
+    $('#calendar-widget').fullCalendar({
+      // contentHeight: 397,
+      editable: true,
+      events: [{
+          title: 'Sony Meeting',
+          start: '2015-05-1',
+          end: '2015-05-3',
+          className: 'fc-event-success',
+        }, {
+          title: 'Conference',
+          start: '2015-05-11',
+          end: '2015-05-13',
+          className: 'fc-event-warning'
+        }, {
+          title: 'Lunch Testing',
+          start: '2015-05-21',
+          end: '2015-05-23',
+          className: 'fc-event-primary'
+        },
+      ],
+      eventRender: function(event, element) {
+        // create event tooltip using bootstrap tooltips
+        $(element).attr("data-original-title", event.title);
+        $(element).tooltip({
+          container: 'body',
+          delay: {
+            "show": 100,
+            "hide": 200
+          }
+        });
+        // create a tooltip auto close timer
+        $(element).on('show.bs.tooltip', function() {
+          var autoClose = setTimeout(function() {
+            $('.tooltip').fadeOut();
+          }, 3500);
+        });
+      }
+    });
+
+
+    // Init plugins for ".task-widget"
+    // plugins: Custom Functions + jQuery Sortable
+    //
+    var taskWidget = $('div.task-widget');
+    var taskItems = taskWidget.find('li.task-item');
+    var currentItems = taskWidget.find('ul.task-current');
+    var completedItems = taskWidget.find('ul.task-completed');
+
+    // Init jQuery Sortable on Task Widget
+    taskWidget.sortable({
+      items: taskItems, // only init sortable on list items (not labels)
+      handle: '.task-menu',
+      axis: 'y',
+      connectWith: ".task-list",
+      update: function( event, ui ) {
+        var Item = ui.item;
+        var ParentList = Item.parent();
+
+        // If item is already checked move it to "current items list"
+        if (ParentList.hasClass('task-current')) {
+            Item.removeClass('item-checked').find('input[type="checkbox"]').prop('checked', false);
+        }
+        if (ParentList.hasClass('task-completed')) {
+            Item.addClass('item-checked').find('input[type="checkbox"]').prop('checked', true);
+        }
+
+      }
+    });
+
+    // Custom Functions to handle/assign list filter behavior
+    taskItems.on('click', function(e) {
+      e.preventDefault();
+      var This = $(this);
+      var Target = $(e.target);
+
+      if (Target.is('.task-menu') && Target.parents('.task-completed').length) {
+        This.remove();
+        return;
+      }
+
+      if (Target.parents('.task-handle').length) {
+		      // If item is already checked move it to "current items list"
+		      if (This.hasClass('item-checked')) {
+		        This.removeClass('item-checked').find('input[type="checkbox"]').prop('checked', false);
+		      }
+		      // Otherwise move it to the "completed items list"
+		      else {
+		        This.addClass('item-checked').find('input[type="checkbox"]').prop('checked', true);
+		      }
+      }
+
+    });
+
+
+    var highColors = [bgSystem, bgSuccess, bgWarning, bgPrimary];
+
+    // Chart data
+    var seriesData = [{
+      name: 'Phones',
+      data: [5.0, 9, 17, 22, 19, 11.5, 5.2, 9.5, 11.3, 15.3, 19.9, 24.6]
+    }, {
+      name: 'Notebooks',
+      data: [2.9, 3.2, 4.7, 5.5, 8.9, 12.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+    }, {
+      name: 'Desktops',
+      data: [15, 19, 22.7, 29.3, 22.0, 17.0, 23.8, 19.1, 22.1, 14.1, 11.6, 7.5]
+    }, {
+      name: 'Music Players',
+      data: [11, 6, 5, 15, 17.0, 22.0, 30.8, 24.1, 14.1, 11.1, 9.6, 6.5]
+    }];
+
+    var ecomChart = $('#ecommerce_chart1');
+    if (ecomChart.length) {
+      ecomChart.highcharts({
+        credits: false,
+        colors: highColors,
+        chart: {
+          backgroundColor: 'transparent',
+          className: '',
+          type: 'line',
+          zoomType: 'x',
+          panning: true,
+          panKey: 'shift',
+          marginTop: 45,
+          marginRight: 1,
+        },
+        title: {
+          text: null
+        },
+        xAxis: {
+          gridLineColor: '#EEE',
+          lineColor: '#EEE',
+          tickColor: '#EEE',
+          categories: ['Jan', 'Feb', 'Mar', 'Apr',
+            'May', 'Jun', 'Jul', 'Aug',
+            'Sep', 'Oct', 'Nov', 'Dec'
+          ]
+        },
+        yAxis: {
+          min: 0,
+          tickInterval: 5,
+          gridLineColor: '#EEE',
+          title: {
+            text: null,
+          }
+        },
+        plotOptions: {
+          spline: {
+            lineWidth: 3,
+          },
+          area: {
+            fillOpacity: 0.2
+          }
+        },
+        legend: {
+          enabled: true,
+          floating: false,
+          align: 'right',
+          verticalAlign: 'top',
+          x: -15
+        },
+        series: seriesData
+      });
+    }
+
+    // Widget VectorMap
+    function runVectorMaps() {
+
+      // Jvector Map Plugin
+      var runJvectorMap = function() {
+        // Data set
+        var mapData = [900, 700, 350, 500];
+        // Init Jvector Map
+        $('#WidgetMap').vectorMap({
+          map: 'us_lcc_en',
+          //regionsSelectable: true,
+          backgroundColor: 'transparent',
+          series: {
+            markers: [{
+              attribute: 'r',
+              scale: [3, 7],
+              values: mapData
+            }]
+          },
+          regionStyle: {
+            initial: {
+              fill: '#E8E8E8'
+            },
+            hover: {
+              "fill-opacity": 0.3
+            }
+          },
+          markers: [{
+            latLng: [37.78, -122.41],
+            name: 'San Francisco,CA'
+          }, {
+            latLng: [36.73, -103.98],
+            name: 'Texas,TX'
+          }, {
+            latLng: [38.62, -90.19],
+            name: 'St. Louis,MO'
+          }, {
+            latLng: [40.67, -73.94],
+            name: 'New York City,NY'
+          }],
+          markerStyle: {
+            initial: {
+              fill: '#a288d5',
+              stroke: '#b49ae0',
+              "fill-opacity": 1,
+              "stroke-width": 10,
+              "stroke-opacity": 0.3,
+              r: 3
+            },
+            hover: {
+              stroke: 'black',
+              "stroke-width": 2
+            },
+            selected: {
+              fill: 'blue'
+            },
+            selectedHover: {}
+          },
+        });
+        // Manual code to alter the Vector map plugin to
+        // allow for individual coloring of countries
+        var states = ['US-CA', 'US-TX', 'US-MO',
+          'US-NY'
+        ];
+        var colors = [bgInfo, bgPrimaryLr, bgSuccessLr, bgWarningLr];
+        var colors2 = [bgInfo, bgPrimary, bgSuccess, bgWarning];
+        $.each(states, function(i, e) {
+          $("#WidgetMap path[data-code=" + e + "]").css({
+            fill: colors[i]
+          });
+        });
+        $('#WidgetMap').find('.jvectormap-marker')
+          .each(function(i, e) {
+            $(e).css({
+              fill: colors2[i],
+              stroke: colors2[i]
+            });
+          });
+      }
+
+      if ($('#WidgetMap').length) {
+        runJvectorMap();
+      }
+    }
+
+  });
+  </script>
+
+</body>
+</html>
